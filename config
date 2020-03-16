@@ -30,7 +30,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -264,7 +264,7 @@ exec compton --config ~/.config/i3/compton2.conf
 bindsym $mod+shift+f exec firefox
 bindsym $mod+shift+x exec i3lock -c "$bg-color"
 bindsym $mod+shift+v exec code
-bindsym $mod+d exec rofi -show run -config ~/.config/i3
+bindsym $mod+d exec rofi -show run -config ~/.config/i3/rofi
 
 exec firefox
 assign [class="Firefox"] $ws2
@@ -275,5 +275,5 @@ assign [class="Thunar"] $ws1
 exec rhythmbox
 assign [class="Rhythmbox"] $ws10
 
-
+exec_always keynav
 
